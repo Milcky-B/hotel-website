@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	box-sizing: border-box;
+   
+}
+body{
+   background: linear-gradient(to right,rgb(206, 206, 206),rgba(68, 110, 187, 0.733));
+   
+   overflow-x: hidden;
+}
+
+/*---Navigation bar*/
+
+header{
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+}
+.nav-bar{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed ;
+	padding-top: 40px;
+	padding-left: 8%;
+	padding-right: 8%;
+    padding-bottom: 8px;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+
+}
+.selected{
+    background-color: #81e7ac;
+    border-radius: 6px;
+    color: #050c24;
+}
+ul{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-transform: none;
+}
+
+nav ul li{
+	list-style-type: none;
+	padding: 10px  25px;
+	border-radius: 6px;
+}
+nav ul li:hover{
+	background-color: #81e7ac;
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+    padding: 5px;
+	
+}
+/* .logo{
+	color: white;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+} */
+.logo img{
+    max-width: 80%;
+}
+
+.toggle{
+    width: 10px;
+    height: 10px;
+}
+span{
+	color: #f9004d;
+}
+nav ul li a:hover{
+	color: #050c24;
+	transition: .4s;
+}
+
+/*-------Main---------*/
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 1000px; */
+    margin-top: 50px;
+    margin: 100px 200px;
+    /* background-color: rgba(187, 227, 243, 0.6); */
+}
+
+form {
+    height: 300px;
+    margin-right: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+aside{
+    margin-top: 50px;
+}
+aside > *{
+    margin-bottom: 20px;
+}
+input{
+    height: 50px; 
+    width:350px;
+    font-size: 20px; 
+    padding-left: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    height: 350px; 
+    width:350px;
+    font-size: 20px; 
+    padding: 10px;
+    border-radius: 10px;
+}
+.info-cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 350px;
+    align-items: center;
+    justify-content: center;
+    border: 20px #858585;
+    background-image: url(../image/even-hotels-eugene-5405616297-4x3.jpg);
+    background-size: cover;
+
+}
+.card{
+    background-color: #eee7c9c5;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    padding-top: 50px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 500ms ease ;
+    
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.card > *{
+    align-items: center;
+    
+}
+.map{
+    
+    margin: 10px;
+    
+}
+
+
+/*------Footer-------r*/
+
+
+footer{
+    display: flex;
+    
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.6);
+    height: 300px;
+    width: 100%;
+}
+footer > *{
+    margin-top: 50px;
+    color: white;
+}
+.get-help ul{
+    display: flex;
+    flex-direction: column;
+    
+}
+.get-help ul li{
+    
+    list-style-type: none;
+    transition: transform 500ms ease;
+    
+}
+.get-help ul li a{
+    text-decoration: none;
+    color: white ;
+   
+}
+.get-help ul li:hover{
+    transform: scale(1.5);
+    transform: translateX(30%);
+}
+
+.socials a {
+    display: inline-block;
+    justify-content: space-around ;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background-color: #ffffff;
+     text-align: center;
+     line-height: 10px;
+     padding-top: 10px;
+     margin-top: 10px;
+     margin-right: 15px;
+     transition: transform 500ms ease;
+     
+}
+.socials a:hover{
+    transform: scale(1.5);
+}
+.line{
+    width: 70px;
+    height: 5px;
+    background-color: #f9004d;
+    margin-top: 5px;
+}
+.bottom{
+    text-transform: uppercase;
+}
+.final{
+    text-align: right;
+}
+.dev{
+    text-align: center;
+}
+
+/*-----Toggle-----*/
+
+.toggle:checked ~ ul{
+    transform: translateX(0%);
+
+}
+.toggle{
+    display: none;
+    cursor: pointer;
+}
+
+.tg{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: none;
+}
+.tg div{
+    
+    
+    width: 25px;
+    height: 4px;
+    background-color: #f9004d;
+    margin-bottom: 5px;
+}
+
+/* pop up display */
+/* .pop{
+    position: fixed;
+    display: flex;
+    left: 50%;
+    right: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%,-50%);
+    background: #050c24;
+    color:white;
+}
+.close-button{
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: red;
+} */
+
+
+/*-----device-Views-----*/
+
+
+@media(max-width: 569px){
+    body{
+       overflow-x: hidden;
+    }
+    .nav-bar ul{
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 102px;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        justify-content:start;
+        width: 50%;
+        transform: translateX(100%);
+        transition: 500ms ease-in-out;
+    }
+    .tg{
+        display: contents;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 50px;
+        margin: 150px 50px;
+    }
+    form{
+        margin-top: 100px;
+        margin-left: -25px;
+    }
+    aside{
+        margin-top: 400px;
+        margin-left: -105px;
+        left: 50px;
+    }
+    aside h1:first-of-type{
+        position: absolute;
+        top: 100px;
+        left: 50px;
+    }
+    aside p:first-of-type{
+        position: absolute;
+        top: 150px;
+        left: 50px;
+        margin-right: 5px;
+    }
+    .map iframe{
+        width:400px;
+    }
+    footer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 500px;
+    }
+    
+    .get-help{
+        position: relative;
+        left: -120px;
+    }
+    .book{
+        position: relative;
+        left: -100px;
+    }
+    .socials{
+        position: relative;
+        left: -65px;
+    }
+    .get-help ul{
+        display: flex; 
+    }
+
+    
+}
+
+
+
+@media(max-width: 969px){
+    .nav-bar ul{
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        top: 102px;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content:start;
+        width: 50%;
+        transform: translateX(100%);
+        transition: 500ms ease-in-out;
+    }
+    .tg{
+        display: contents;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 50px;
+        margin: 150px 50px;
+    }
+    form{
+        margin-top: 100px;
+    }
+    aside{
+        margin-top: 400px;
+        left: 50px;
+    }
+    aside h1:first-of-type{
+        position: absolute;
+        top: 100px;
+        left: 50px;
+    }
+    aside p:first-of-type{
+        position: absolute;
+        top: 150px;
+        left: 50px;
+        margin-right: 5px;
+    }
+}
+
+

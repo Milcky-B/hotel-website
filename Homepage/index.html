@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Hotel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../Resources/eb41293c00dbc63fb4b9e2772ac2a9212.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.php" class="logo">
+                    <img src="../Resources/eb41293c00dbc63fb4b9e2772ac2a9212.png" height="50px" width="150px" alt="logo">
+                </a>
+                <div class="ham">
+                    <img src="../Resources/icons8_menu_48px.png" height="30px">
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../HomePage/index.php" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../AC/AboutPage/About.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../AC/ContactUsPage/ContactUs.htm" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+    <div class="main">
+        <div class="container">
+            <div class="main-heading">
+                <h1 class="title">Discover</h1>
+                <h2 class="subtitle">Luxurious Rooms</h2>
+            </div>
+            <button class="btn btn-gradient">Fair Prices</button>
+        </div>
+    </div>
+
+    <section class="availability">
+        <div class="container">
+            <p class="Check"> check availability</p>
+            <form action="check.php" class="form" method="get">
+                <div class="inputs">
+                    <label for="check-in" class="input-label">Check In</label>
+                    <input type="date" class="input" id="check-in" name="check-in" required>
+                </div>
+                <div class="inputs">
+                    <label for="Nights" class="input-label">Nights</label>
+                    <input name='nights' type="number" class="input" id="Nights" placeholder="1" required>
+                </div>
+                <div class="inputs">
+                    <label for="room-type" class="input-label">Room Type</label>  
+                <select name="room-type" id="room-type" class="input">
+                <option value="Normal Room" selected value>Normal Room</option>
+                <option value="Family Room">Family Room</option>
+                <option value="Pent House">Pent House</option>
+            </select>
+                </div>
+                <button type="Submit" class="btn form-btn form-send">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </section>
+    <section class="rooms">
+        <div class="container">
+            <h5 class="section-head">
+                Our Rooms <br>
+                <button class="btn form-btn room-btn">Explore Rooms</button>
+            </h5>
+        <div class="grid">
+            <div class="grid-item featured-rooms one">
+                <h5 class="room-type">Normal Room</h5>
+                <p class="price">$250/Night</p>
+            </div>
+
+            <div class="grid-item featured-rooms two">
+                <h5 class="room-type">Family Room</h5>
+                <p class="price">$550/Night</p>
+            </div>
+
+            <div class="grid-item featured-rooms three">
+                <h5 class="room-type">Pent House</h5>
+                <p class="price">$999/Night</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="events">
+        <div class="container">
+            <div class="events-content">
+                <div class="titles">
+
+            </div>
+        </div>
+    </section>
+    <section class="additional">
+        <div class="container">
+            <h5 class="additional-head">Additional Services</h5>
+            <div class="grid2">
+            <div class="grid img0">
+                <div class="grid-items featured-services">
+                    <div class="image-wrap">
+                        <img class="serv-img "src="../Resources/Images/additional/buffet2.jpg" alt="Meal">
+                        <h5 class="serv-name">Restaurant</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="grid img1">
+                <div class="grid-items featured-services">
+                    <div class="image-wrap">
+                        <img class="serv-img "src="../Resources/Images/additional/Barjpg.jpg" alt="Bar">
+                        <h5 class="serv-name">Sports Bar</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="grid img2">
+                <div class="grid-items featured-services">
+                    <div class="image-wrap">
+                        <img class="serv-img "src="../Resources/Images/additional/gym1-600x388.jpg" alt="Gym">
+                        <h5 class="serv-name">Gym</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="grid img3">
+                <div class="grid-items featured-services">
+                    <div class="image-wrap">
+                        <img class="serv-img "src="../Resources/Images/additional/parking1.jpg" alt="parking">
+                        <h5 class="serv-name">Parking Spot</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="grid img4">
+                <div class="grid-items featured-services">
+                    <div class="image-wrap">
+                        <img class="serv-img "src="../Resources/Images/additional/pool1.jpg" alt="pool">
+                        <h5 class="serv-name">Swimming Pool</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="grid img5">
+                <div class="grid-items featured-services">
+                    <div class="image-wrap">
+                        <img class="serv-img "src="../Resources/Images/additional/sauna.jpg" alt="Sauna" >
+                        <h5 class="serv-name">Spa & Sauna</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="grid img6">
+                <div class="grid-items featured-services">
+                    <div class="image-wrap">
+                        <img class="serv-img "src="../Resources/Images/additional/tennis1.jpg" alt="Court">
+                        <h5 class="serv-name">Tennis Court</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+    <div class="book">
+        <h3>Book Now</h3>
+        <div class="line"></div>
+        <p> +251 00 000 0000</p>
+        <p> +251 00 000 0000</p>
+        <p> info@somesitelink.com</p>
+    </div>
+    <div class="get-help">
+        <h3>Get Help</h3>
+        <div class="line"></div>
+        <ul>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="">Send Feedback</a></li>
+            <li><a href="">Terms</a></li>
+            
+        </ul>
+    </div>
+   <div class="socials">
+        <h3>Follow Us</h3>
+        <div class="line"></div>
+         <div class="social-links">
+           <a href=""><i class="fa-brands fa-facebook"></i></a>
+           <a href=""><i class="fa-brands fa-twitter"></i></a>
+           <a href=""><i class="fa-brands fa-instagram"></i></a>
+           <a href=""><i class="fa-brands fa-telegram"></i></a>
+         </div>
+    </div> 
+   </div>
+</div>
+</footer>
+<div class="bottom">
+    <h4 class="dev"> Developed By God's Miracle And Alot Of YouTube Videos</h4>
+    <p class="final">&copy; 2022 HiLCoE Mr.Zelalem, Web Project</p>
+</body>
+</html>
+<script type="text/javascript"  src="./index.js"></script>

@@ -1,0 +1,696 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	box-sizing: border-box;  
+}
+:root{
+    --dark-color:#2d2c2c;
+    --sky-blue:#7d99cd;
+    --gradient-color:linear-gradient(to right,rgb(206, 206, 206),rgba(68, 110, 187, 0.733));
+    --gradient-color-alt:linear-gradient(to right,rgba(68, 110, 187, 0.733),rgb(206, 206, 206));
+    --transparent-color:rgba(0, 0, 0, 0.6);
+}
+
+/* Relevant */
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.6rem;
+    color: var(--dark-color);
+    background: var(--gradient-color);
+    overflow-x:hidden ;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color: #fff;
+}
+
+a:visited{
+   color: #fff;
+}
+
+ul{
+    list-style: none;
+}
+
+section{
+    padding: 5rem;
+}
+
+/* Containers */
+
+.container{
+    width: 100%;
+    max-width: 120rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.btn{
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem 3.5rem;
+    border:none;
+    border-radius: 10rem;
+}
+
+/* Header */
+
+.header{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--transparent-color);
+    z-index: 999;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    max-width: 80%;
+}
+
+.ham{
+    font-size: 2.6rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1500;
+}
+
+.nav-list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--sky-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1400;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s;
+}
+
+.disp-menu .nav-list{
+    opacity: 1;
+    transform: scale(1);
+}
+
+nav ul li:hover{
+	background-color: #81e7ac;
+}
+
+.nav-item:hover{
+	background-color: #81e7ac;
+}
+
+.nav-item:not(:last-child){
+    margin-bottom: 0.5rem;
+}
+
+.nav-link{
+    display: block;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem;
+}
+
+/* The Center */
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background: url(../Resources/reception.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    animation: slider 30s infinite;
+    animation-timing-function: linear;
+}
+
+.main::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-color: var(--sky-blue);
+    opacity: 0.3;
+}
+
+.main-heading{
+    color:rgba(255, 255, 255, 0.89);
+    line-height: 1;
+    text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 2.5rem;
+}
+
+.title{
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.subtitle{
+    font-size: 3.6rem;
+    font-weight: 300;
+    font-family: 'Segoe UI Light', cursive;
+}
+
+.btn-gradient{
+    background: var(--gradient-color);
+}
+
+.btn-gradient:hover{
+    background: var(--gradient-color-alt);
+}
+
+/* Availability */
+
+.Check{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Open Sans';
+}
+
+.inputs{
+    margin-bottom: 1.5rem;
+}
+
+.input-label{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.input{
+    outline: none;
+    border: none;
+    width: 100%;
+    min-height: 4rem;
+    padding: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: "Open Sans",sans-serif;
+    resize: none;
+}
+
+.form-btn{
+    cursor: pointer;
+    margin-top: 2.5rem;
+    background-color:var(--sky-blue)
+}
+
+.form-btn:hover{
+    background: var(--gradient-color-alt);
+}
+
+/* Rooms */
+
+.one{
+    background: url(../Resources/Images/normalroom/normal1.jpg) center no-repeat;
+    background-size:cover;
+    animation: normals 30s infinite;
+    animation-timing-function: linear;
+}
+
+.two{
+    background: url(../Resources/Images/thirdroom/gettyimages-1266155634-2048x2048.jpg) center no-repeat;
+    background-size:cover;
+    animation: family 30s infinite;
+    animation-timing-function: linear;
+}
+
+.three{
+    background: url(../Resources/Images/penthouse/gettyimages-1291284268-2048x2048.jpg) center no-repeat;
+    background-size:cover;
+    animation: pent 30s infinite;
+    animation-timing-function: linear;
+}
+
+.section-head{
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    grid:2.5rem
+}
+
+.grid-item{
+    height: 300px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featured-rooms{
+    height: 35rem;
+    padding: 1rem;
+    position: relative;
+    color: #fff;
+}
+
+.featured-rooms::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--sky-blue);
+    opacity: 0.3;
+}
+
+.room-type{
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    top: 100px;
+}
+
+.price{
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.one:hover{
+    transform: scale(1.05);
+}
+
+.two:hover{
+    transform: scale(1.05);
+}
+
+.three:hover{
+    transform: scale(1.05);
+}
+
+/* Events */
+
+.events{
+    background: var(--gradient-color-alt),url(../Resources/Images/meetinghall/meeting\ hall.jpg) center no-repeat;
+    background-size:cover;
+
+}
+
+.events:hover{
+    background: var(--gradient-color),url(../Resources/Images/meetinghall/meeting\ hall.jpg) center no-repeat;
+    background-size:cover;
+}
+
+.events-content{
+    background: #fff;
+    line-height: 50px;
+}
+
+.titles{
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    color: var(--sky-blue);
+}
+
+.details{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    color: var(--sky-blue);
+}
+
+/* Additional Services */
+
+.additional{
+    background-color: #f2f6f9;
+}
+
+.image-wrap{
+    position: relative;
+    height: 25rem;
+    transition: 1s;
+}
+
+.image-wrap::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-color);
+    opacity: 0.5;
+}
+
+.serv-name{
+    font-size: 2.6rem;
+    background-color: var(--sky-blue);
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 2.5rem;
+    z-index: 20;
+    display: none;
+}
+
+.serv-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-wrap:hover .serv-name{
+    display: block;
+}
+
+.additional-head{
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+}
+
+.featured-services{
+    height: 35rem;
+    padding: 1rem;
+    position: relative;
+    color: #fff;
+}
+
+.img0{
+    grid-area: four;
+}
+
+.img1{
+    grid-area: five;
+}
+
+.img2{
+    grid-area: six;
+}
+
+.img3{
+    grid-area: seven;
+}
+
+.img4{
+    grid-area: eight;
+}
+
+.img5{
+    grid-area: nine;
+}
+
+.img6{
+    grid-area: ten;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.6);
+    height: 300px;
+    width: 100%;
+}
+footer > *{
+    margin-top: 50px;
+    color: white;
+}
+
+.book, .get-help, .socials{
+    margin-bottom: 10px;
+}
+.get-help ul{
+    display: flex;
+    flex-direction: column;
+    
+}
+.get-help ul li{
+    transition: transform 500ms ease;
+    
+}
+.get-help ul li a{
+    text-decoration: none;
+    color: white ;
+   
+}
+.get-help ul li:hover{
+    transform: scale(1.5);
+    transform: translateX(30%);
+}
+
+.socials a {
+    display: inline-block;
+    justify-content: space-around ;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background-color: #ffffff;
+     text-align: center;
+     line-height: 10px;
+     padding-top: 10px;
+     margin-top: 10px;
+     margin-right: 15px;
+     transition: transform 500ms ease;
+     
+}
+.socials a:hover{
+    transform: scale(1.5);
+}
+.line{
+    width: 70px;
+    height: 5px;
+    background-color: #f9004d;
+    margin-top: 5px;
+}
+.bottom{
+    text-transform: uppercase;
+}
+.final{
+    text-align: right;
+}
+.dev{
+    text-align: center;
+}
+
+/* Animation */
+
+@keyframes slider {
+    0%{
+        background: url(../Resources/reception.jpg) center no-repeat;
+        background-size:cover;
+    }
+    25%{
+        background: url(../Resources/pexels-engin-akyurt-1579253.jpg) center no-repeat;
+        background-size:cover;
+    }
+    55%{
+        background: url(../Resources/pexels-pixabay-164595.jpg) center no-repeat;
+        background-size:cover;
+    }
+    85%{
+        background: url(../Resources/pexels-pixabay-271624.jpg) center no-repeat;
+        background-size:cover;
+    }
+    
+}
+
+@keyframes normals {
+    25%{
+        background: url(../Resources/Images/normalroom/normal1.jpg) center no-repeat;
+        background-size:cover;
+    }
+    55%{
+        background: url(../Resources/Images/normalroom/normalall.jpg) center no-repeat;
+        background-size:cover;
+    }
+    100%{
+        background: url(../Resources/Images/normalroom/normal\ bath.jpg) center no-repeat;
+        background-size:cover;
+    }
+}
+
+@keyframes family {
+    25%{
+        background: url(../Resources/Images/thirdroom/gettyimages-1266155634-2048x2048.jpg) center no-repeat;
+        background-size:cover;
+    }
+    55%{
+        background: url(../Resources/Images/thirdroom/gettyimages-1266155645-2048x2048.jpg) center no-repeat;
+        background-size:cover;
+    }
+    100%{
+        background: url(../Resources/Images/thirdroom/gettyimages-1266155640-2048x2048.jpg) center no-repeat;
+        background-size:cover;
+    }
+}
+
+@keyframes pent {
+    25%{
+        background: url(../Resources/Images/penthouse/gettyimages-1291284268-2048x2048.jpg) center no-repeat;
+        background-size:cover;
+    }
+    55%{
+        background: url(../Resources/Images/penthouse/gettyimages-592681584-2048x2048.jpg) center no-repeat;
+        background-size:cover;
+    }
+    100%{
+        background: url(../Resources/Images/penthouse/gettyimages-1073403366-2048x2048.jpg) center no-repeat;
+        background-size:cover;
+    }
+}
+
+/* Media Queries */
+
+@media(min-width:740px){
+
+    .header{
+        height: 5rem;
+    }
+
+    .title{
+        font-size: 8rem;
+    }
+
+    .one{
+        grid-area: one;
+    }
+
+    .two{
+        grid-area: two;
+    }
+
+    .three{
+        grid-area: three;
+    }
+
+    .grid{
+        grid-template-areas: 'one  two'
+                            'three three'                    
+        ;
+    }
+
+    .grid2{
+        display: grid;
+        grid-template-areas:'four four five five'
+                            'six six seven seven'
+                            'eight eight nine nine'
+                            'ten ten ten ten'
+                            ;                   
+    }   
+}
+
+@media(min-width:1000px) {
+
+    .ham{
+        display: none;
+    }
+
+    .nav-list{
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: initial;
+        opacity: 1;
+        transform: scale(0.5);
+    }
+
+    .nav-item{
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+
+    .nav-link{
+        font-size: 2.3rem;
+        font-weight: normal;
+    }
+
+    .detail-event{
+        padding: 0 10px;
+    }
+
+    .title{
+        font-size: 10rem;
+    }
+
+    .subtitle{
+        font-size: 5rem;
+    }
+
+    .btn{
+        font-size: 2rem;
+    }
+
+    .btn-gradient{
+        font-size: 2.5rem;
+    }
+
+    .one{
+        grid-area: one;
+    }
+
+    .two{
+        grid-area: two;
+    }
+
+    .three{
+        grid-area: three;
+    }
+
+    .grid{
+        grid-template-areas: 'one two three';
+    }
+
+    .grid2{
+        grid-template-areas: 'four five six'
+                              'seven eight nine'
+                              'ten ten ten'  
+        ;
+    }
+}
